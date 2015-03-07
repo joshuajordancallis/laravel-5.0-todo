@@ -89,3 +89,17 @@ $('.bsdp').datepicker({
     todayBtn: true,
     startDate: 'today'
 });
+
+$('[data-toggle="popover"]').on('click', function(e) {
+
+   $(this).popover( {
+
+        html:true,
+        content: function() {
+         // return $(' <div class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel officiis, ex similique voluptas</div><div class="btn btn-dark btn-danger pull-right">Save</div><br><br><hr></div>');
+         return $(this).parent().find('pop-over-body').html();
+        }
+
+    });
+});
+

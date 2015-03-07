@@ -13,22 +13,39 @@
 </div>
 
 <div class="container">
+	{{Form::open(['url'=> 'new'])}}
     <div class="row">
-    {{Form::open(['url'=> 'new'])}}
         <div class="col-md-6">
 	        <div class="form-group">
 	        	<label for="project-name" class="control-label">Project Name:</label>
 	        	<input type="text" name="project-name" id="project-name" class="form-control" placeholder="Project Name">
 	        </div>
+
+
 	       <div class="form-group">
 	        	<label class="control-label">Project Sub Tasks:</label>
-	        	<input type="text" name="subtask[]" class="form-control project-task" placeholder="Project Sub Task 1">
+	        	<div class="input-group">
+		        	<input type="text" name="subtask[]" class="form-control project-task" placeholder="Project Sub Task 3">
+		        	<span class="input-group-btn">
+		        		<a href="#" tabindex="-1" class="btn btn-link delete-option" title="Add description" data-toggle="popover"><span class="fa fa-plus"></span></a>
+
+							<div class="pop-over-body">
+								<p> it works</p>
+							</div>
+		        	</span>
+		        </div>
 	        </div>
 	        <div class="form-group">
-	        	<input type="text" name="subtask[]" class="form-control project-task" placeholder="Project Sub Task 2">
+	        	<div class="input-group">
+		        	<input type="text" name="subtask[]" class="form-control project-task" placeholder="Project Sub Task 3">
+		        	<span class="input-group-btn"><a href="#" tabindex="-1" class="btn btn-link delete-option" title="Add description" data-toggle="popover"><span class="fa fa-plus"></span></a></span>
+		        </div>
 	        </div>
 	        <div class="form-group">
-	        	<input type="text" name="subtask[]" class="form-control project-task" placeholder="Project Sub Task 3">
+		        <div class="input-group">
+		        	<input type="text" name="subtask[]" class="form-control project-task" placeholder="Project Sub Task 3">
+		        	<span class="input-group-btn"><a href="#" tabindex="-1" class="btn btn-link delete-option" title="Add description" data-toggle="popover"><span class="fa fa-plus"></span></a></span>
+		        </div>
 	        </div>
 	    </div>
 	    <div class="col-md-6">
@@ -36,9 +53,13 @@
 	        	<label for="project-finaldate" class="control-label">Date to be complete:</label>
 	        	<input type="text" name="project-finaldate" id="project-finaldate" class="form-control bsdp" value="{{date('d/m/Y')}}">
 	        </div>
-	        <input type="submit" class="btn btn-primary pull-right" value="Submit">
 	    </div>
-    {{ Form::close() }}
     </div>
+    <div class="row">
+    	<div class="col-md-12">
+    		<input type="submit" class="btn btn-primary pull-right" value="Submit">
+    	</div>
+    </div>
+    {{ Form::close() }}
 </div>
 @stop
