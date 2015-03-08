@@ -26,7 +26,11 @@ return array(
 	|
 	*/
 
-	'url' => 'http://localhost/web/laravel/laravel/public/',
+	//CALLIS URL
+	//'url' => 'http://localhost/web/laravel/laravel/public/',
+
+	//MORSE URL
+	'url' => 'http://todo.local/',
 
 	/*
 	|--------------------------------------------------------------------------
