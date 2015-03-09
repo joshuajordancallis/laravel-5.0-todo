@@ -86,7 +86,7 @@ function removeItem(element){
 $('.bsdp').datepicker({
     format: 'dd/mm/yyyy',
     todayHighlight: true,
-    todayBtn: true,
+    todayBtn: "linked",
     startDate: 'today'
 });
 
