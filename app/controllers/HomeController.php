@@ -4,7 +4,7 @@ class HomeController extends BaseController {
 
 	public function getIndex()
 	{
-		$projects = Auth::user()->items;
+		$projects = Auth::user()->projects;
 
 		return View::make('projects', [
 		   'projects' => $projects
@@ -15,10 +15,10 @@ class HomeController extends BaseController {
 		$id = Input::get('id');
 		$userId = Auth::user()->id;
 
-		$item = Item::findOrFail($id);
+		$projects = Item::findOrFail($id);
 
-		if($item->owner_id == $userId) {
-			$item->mark();
+		if($projects->owner_id == $userId) {
+			$projects->mark();
 		}
 
 		return Redirect::route('home');
@@ -37,16 +37,19 @@ class HomeController extends BaseController {
 			return Redirect::route('new')->withErrors($validator);
 		}
 
-		$item = new Item;
-		$item->name = Input::get('name');
-		$item->owner_id = Auth::user()->id;
-		$item->save();
+		$project = new Project;
+		$project->name = Input::get('name');
+		$project->owner_id = Auth::user()->id;
+		$project->save();
 
 		return Redirect::route('home');
 
 	}
 
 	public function getProject($projectID) {
+
+		$project = new Project();
+		$project->getSubTasks($projectID);
 
 		return View::make('project');
 	}

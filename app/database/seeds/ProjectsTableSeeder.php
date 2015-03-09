@@ -5,24 +5,30 @@ class ProjectsTableSeeder extends Seeder {
 		DB::table('projects')->delete();
 
 		$projects = array(
-		     [
-		     	'owner_id' => '1',
-		     	'name' => 'learavel duuddeess',
-		     	'done' => false
-		     ],
-
-		      [
-		     	'owner_id' => '1',
-		     	'name' => 'php duuddeeess',
-		     	'done' => true
-		     ],
-
-		      [
-		     	'owner_id' => '1',
-		     	'name' => 'programming duuddeess',
-		     	'done' => false
-		     ],
-
+			[
+				'owner_id' => '1',
+				'name' => 'Finish AC',
+				'completion_date' => date('Y-m-d'),
+				'complete' => false
+			],
+			[
+				'owner_id' => '1',
+				'name' => 'Finish This Project',
+				'completion_date' => date('Y-m-d'),
+				'complete' => false
+			],
+			[
+				'owner_id' => '1',
+				'name' => 'Finish This Project',
+				'completion_date' => date('Y-m-d'),
+				'complete' => false
+			],
+			[
+				'owner_id' => '1',
+				'name' => 'Finish This Project',
+				'completion_date' => date('Y-m-d'),
+				'complete' => false
+			],
 		);
 
 		DB::table('projects')->insert($projects);

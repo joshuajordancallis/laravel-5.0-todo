@@ -13,7 +13,7 @@
 </div>
 
 <div class="container">
-	{{Form::open(['url'=> 'new'])}}
+	{{Form::open(['url'=> 'new', 'method'=>'post'])}}
     <div class="row">
         <div class="col-md-6">
 	        <div class="form-group">

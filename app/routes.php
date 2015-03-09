@@ -1,6 +1,6 @@
 <?php
-Route::bind('task', function($value, $route) {
-	return Item::where('id', $value)->first();
+Route::bind('project', function($value, $route) {
+	return Projects::where('id', $value)->first();
 });
 
 Route::get('/', array('as' => 'home', 'uses' => 'HomeController@getIndex'))->before('auth');
@@ -15,6 +15,6 @@ Route::post('/new', ['uses' => 'HomeController@postNew'])->before('csrf');
 Route::get('/project/{projectID}', ['as' => 'project', 'uses' => 'HomeController@getProject']);
 Route::post('/project/{projectID}', ['uses' => 'HomeController@postProject']);
 
-Route::get('/delete/{task}', ['as' => 'delete', 'uses' => 'HomeController@getDelete']);
+Route::get('/delete/{project}', ['as' => 'delete', 'uses' => 'HomeController@getDelete']);
 
 Route::get('/logout', ['uses' => 'AuthController@Logout']);
