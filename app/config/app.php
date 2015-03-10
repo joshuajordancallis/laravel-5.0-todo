@@ -25,11 +25,6 @@ return array(
 	| your application so that it is used when running Artisan tasks.
 	|
 	*/
-
-	//CALLIS URL
-	//'url' => 'http://localhost/web/laravel/laravel/public/',
-
-	//MORSE URL
 	'url' => 'http://todo.local/',
 
 	/*
