@@ -1,8 +1,8 @@
 <?php
 
 class Projects extends Eloquent {
-	public function mark() {
-		$this->done = $this->done ? false : true;
+	public function markComplete() {
+		$this->complete = $this->complete ? false : true;
 		$this->save();
 	}
 }

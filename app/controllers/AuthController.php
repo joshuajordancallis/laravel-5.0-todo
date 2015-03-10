@@ -29,7 +29,7 @@ class AuthController extends Controller {
 		]);
 	}
 
-	return Redirect::route('home');
+	return Redirect::route('dashboard');
 	}
 
 	public function Logout() {

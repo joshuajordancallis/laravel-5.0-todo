@@ -27,24 +27,21 @@
 	        	<div class="input-group">
 		        	<input type="text" name="subtask[]" class="form-control project-task" placeholder="Project Sub Task 3">
 		        	<span class="input-group-btn">
-		        		<a href="#" tabindex="-1" class="btn btn-link delete-option" title="Add description" data-toggle="popover"><span class="fa fa-plus"></span></a>
+		        		<a href="#" tabindex="-1" class="btn btn-link delete-option" title="Add description"><span class="fa fa-plus"></span></a>
 
-							<div class="pop-over-body">
-								<p> it works</p>
-							</div>
 		        	</span>
 		        </div>
 	        </div>
 	        <div class="form-group">
 	        	<div class="input-group">
 		        	<input type="text" name="subtask[]" class="form-control project-task" placeholder="Project Sub Task 3">
-		        	<span class="input-group-btn"><a href="#" tabindex="-1" class="btn btn-link delete-option" title="Add description" data-toggle="popover"><span class="fa fa-plus"></span></a></span>
+		        	<span class="input-group-btn"><a href="#" tabindex="-1" class="btn btn-link delete-option" title="Add description"><span class="fa fa-plus"></span></a></span>
 		        </div>
 	        </div>
 	        <div class="form-group">
 		        <div class="input-group">
 		        	<input type="text" name="subtask[]" class="form-control project-task" placeholder="Project Sub Task 3">
-		        	<span class="input-group-btn"><a href="#" tabindex="-1" class="btn btn-link delete-option" title="Add description" data-toggle="popover"><span class="fa fa-plus"></span></a></span>
+		        	<span class="input-group-btn"><a href="#" tabindex="-1" class="btn btn-link delete-option" title="Add description"><span class="fa fa-plus"></span></a></span>
 		        </div>
 	        </div>
 	    </div>
