@@ -20,7 +20,7 @@ class ProjectController extends \BaseController {
 			$projects->mark();
 		}
 
-		return Redirect::route('home');
+		return Redirect::to('home');
 	}
 
 	public function getNew() {
@@ -33,7 +33,7 @@ class ProjectController extends \BaseController {
 		$validator = Validator::make(Input::all(), $rules);
 
 		if($validator->fails()) {
-			return Redirect::route('new')->withErrors($validator);
+			return Redirect::to('new')->withErrors($validator);
 		}
 
 		$project = new Project;
@@ -41,7 +41,7 @@ class ProjectController extends \BaseController {
 		$project->owner_id = Auth::user()->id;
 		$project->save();
 
-		return Redirect::route('home');
+		return Redirect::to('home');
 	}
 
 	public function getProject($projectID) {
@@ -63,7 +63,7 @@ class ProjectController extends \BaseController {
 			$project->delete();
 		}
 
-		return Redirect::route('home');
+		return Redirect::to('home');
 	}
 
 

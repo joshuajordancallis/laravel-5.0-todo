@@ -1,32 +1,10 @@
 body {
-	background: #e1e1e1;
-	font-size: 16px;
-	padding: 20px 0px;
-}
-
-p {
-	color: green;
-}
-
-.container {
-	width: 100%;
-	max-width: 80%;
-	margin: 1em auto;
-	background: #fff;
-	border: 1px solid #cccccc;
-	padding: 20px;
-	border-radius: 4px;
-	box-shadow: 0 2px 4px rgba(0,0,0, 0.1);
-}
-
-li {
-	display: inline;
-	list-style: none;
-}
-
-body{
     background-color:#EEEEEE;
+	font-size: 16px;
+	padding:0px;
+    padding-top: 90px;
 }
+/** todo list */
 .todolist{
     background-color:#FFF;
     padding:10px 20px 10px 20px;
@@ -35,9 +13,6 @@ body{
     margin:0;
     padding-bottom:20px;
     text-align:center;
-}
-input[type=text].form-control {
-	box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.04) inset;
 }
 .form-control{
     border-radius:0;
@@ -71,4 +46,15 @@ li.ui-state-default:last-child{
     margin-top:10px;
 }
 
-
+input[type=text].form-control {
+    box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.04) inset;
+}
+.highlighted-box {
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0,0,0, 0.1);
+    background: #fff;
+    border: 1px solid #cccccc;
+}
+.top-margin-20 {
+    margin-top: 20px;
+}

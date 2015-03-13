@@ -11,7 +11,7 @@
 </head>
 
 <body>
-	<div class="container">
+	<div id="page-container">
 		@yield('content')
 	</div>
 </body>

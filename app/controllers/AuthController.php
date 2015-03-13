@@ -10,7 +10,7 @@ class AuthController extends Controller {
 		$validator = Validator::make(Input::all(), $rules);
 
 	if ($validator->fails()) {
-		return Redirect::route('login')->withErrors($validator);
+		return Redirect::to('login')->withErrors($validator);
 	}
 
 	$auth = Auth::attempt([
@@ -22,20 +22,20 @@ class AuthController extends Controller {
      ], false);
 
 	if(!$auth) {
-		return Redirect::route('login')->withErrors([
+		return Redirect::to('login')->withErrors([
 
 		  'Invalid credentials were provided'
 
-		]);
+		])->withInput();
 	}
 
-	return Redirect::route('dashboard');
+	return Redirect::to('dashboard');
 	}
 
 	public function Logout() {
 		$Logout = Auth::Logout();
 		if (!$Logout) {
-			return Redirect::to('/')->withErrors(['we are unable to log you out']);
+			return Redirect::to('dashboard')->withErrors(['we are unable to log you out']);
 		}
 		return Redirect::to('/');
 
