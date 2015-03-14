@@ -6,7 +6,7 @@ class ProjectsTableSeeder extends Seeder {
 
 		$projects = array(
 			[
-				'owner_id' => '1',
+				'owner_id' => '3',
 				'name' => 'Finish AC',
 				'completion_date' => strtotime(date('Y-m-d')),
 				'complete' => false
