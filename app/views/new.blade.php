@@ -6,7 +6,8 @@
 	<div class="row">
 		<div class="col-md-6 col-md-offset-3">
 			 @foreach($errors->all() as $error)
-			 <div class="alert alert-danger">
+			 <div class="alert alert-danger alert-dismissable" role="alert">
+				<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 				{{ $error }}
 			 </div>
 			@endforeach
@@ -20,7 +21,6 @@
 	        	<label for="project-name" class="control-label">Project Name:</label>
 	        	<input type="text" name="project-name" id="project-name" class="form-control" placeholder="Project Name">
 	        </div>
-
 
 	       <div class="form-group">
 	        	<label class="control-label">Project Sub Tasks:</label>
