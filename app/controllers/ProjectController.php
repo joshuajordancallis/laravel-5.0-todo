@@ -62,6 +62,10 @@ class ProjectController extends \BaseController {
 	// 	return View::make('project');
 	// }
 
+	public function getEdit() {
+		return View::make('edit');
+	}
+
 	public function getDelete(Project $project) {
 		$userId = Auth::user()->id;
 

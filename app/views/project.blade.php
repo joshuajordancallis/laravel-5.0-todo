@@ -8,7 +8,7 @@
 			<h3 class="page-header">{{$project->name}}</h3>
 		</div>
 		<div class="col-md-2">
-			<a href="#" class="pull-right">Edit Project</a>
+			<a href="{{URL::to('project/edit',[$project->id])}}" class="pull-right">Edit Project</a>
 		</div>
 	</div>
     <div class="row">

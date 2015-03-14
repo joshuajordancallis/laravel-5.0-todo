@@ -18,7 +18,7 @@ Route::get('/project/{projectID}', ['as' => 'project', 'uses' => 'ProjectControl
 Route::post('/login', ['uses' => 'AuthController@postLogin'])->before('csrf');
 /** logout do i need to explain */
 Route::get('/logout', ['uses' => 'AuthController@Logout']);
-
+;
 //Route::post('/project/{projectID}', ['uses' => 'ProjectController@postProject']);
 
 /** Update a project */
@@ -29,3 +29,5 @@ Route::get('/project/delete/{projectID}', ['as' => 'delete', 'uses' => 'ProjectC
 
 /** Process the new project */
 Route::post('/new', ['uses' => 'ProjectController@postNew'])->before('csrf');
+
+Route::get('project/edit/{projectID}', ['as' => 'edit', 'uses' => 'ProjectController@getEdit']);

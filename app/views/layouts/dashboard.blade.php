@@ -1,6 +1,6 @@
 <html>
 <head>
-	<title> dashbaord</title>
+	<title> dashboard</title>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
 <link rel="stylesheet" href="{{ URL::asset('css/style.css')}}">
@@ -39,6 +39,7 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 <script src="{{ URL::asset('javascript/bsdp.js')}}"></script>
 <script src="{{ URL::asset('javascript/custom.js')}}"></script>
+<script src="{{ URL::asset('javascript/dashboard.js')}}"></script>
 
 
 
