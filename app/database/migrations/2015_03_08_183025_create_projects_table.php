@@ -16,7 +16,7 @@ class CreateProjectsTable extends Migration {
 			$table->increments('id');
 			$table->integer('owner_id');
 			$table->string('name');
-			$table->timestamp('completion_date');
+			$table->date('completion_date');
 			$table->boolean('complete')->default(false);
 			$table->timestamps();
 		});
