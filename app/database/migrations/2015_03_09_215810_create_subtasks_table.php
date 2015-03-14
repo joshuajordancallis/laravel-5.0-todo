@@ -17,7 +17,7 @@ class CreateSubtasksTable extends Migration {
 			$table->integer('project_id');
 			$table->string('name', 150);
 			$table->string('description', 500);
-			$table->date('completion_date');
+			$table->timestamp('completion_date');
 			$table->boolean('complete')->default(false);
 			$table->timestamps();
 		});
