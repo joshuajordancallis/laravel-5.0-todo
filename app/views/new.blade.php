@@ -2,17 +2,17 @@
 
 @section('content')
 
-<div class="row">
-	<div class="col-md-6 col-md-offset-3">
-		 @foreach($errors->all() as $error)
-		 <div class="alert alert-danger">
-			{{ $error }}
-		 </div>
-		@endforeach
-	</div>
-</div>
-
 <div class="container">
+	<div class="row">
+		<div class="col-md-6 col-md-offset-3">
+			 @foreach($errors->all() as $error)
+			 <div class="alert alert-danger">
+				{{ $error }}
+			 </div>
+			@endforeach
+		</div>
+	</div>
+
 	{{Form::open(['url'=> 'new', 'method'=>'post'])}}
     <div class="row">
         <div class="col-md-6">
