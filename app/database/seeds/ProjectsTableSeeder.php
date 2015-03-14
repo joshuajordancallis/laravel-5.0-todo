@@ -8,25 +8,25 @@ class ProjectsTableSeeder extends Seeder {
 			[
 				'owner_id' => '1',
 				'name' => 'Finish AC',
-				'completion_date' => date('Y-m-d'),
+				'completion_date' => strtotime(date('Y-m-d')),
 				'complete' => false
 			],
 			[
 				'owner_id' => '1',
 				'name' => 'Finish This Project',
-				'completion_date' => date('Y-m-d'),
+				'completion_date' => strtotime(date('Y-m-d')),
 				'complete' => false
 			],
 			[
 				'owner_id' => '1',
 				'name' => 'Finish This Project',
-				'completion_date' => date('Y-m-d'),
+				'completion_date' => strtotime(date('Y-m-d')),
 				'complete' => false
 			],
 			[
 				'owner_id' => '1',
 				'name' => 'Finish This Project',
-				'completion_date' => date('Y-m-d'),
+				'completion_date' => strtotime(date('Y-m-d')),
 				'complete' => false
 			],
 		);
