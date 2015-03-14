@@ -14,10 +14,10 @@ class ProjectController extends \BaseController {
 		$id = Input::get('id');
 		$userId = Auth::user()->id;
 
-		$projects = Item::findOrFail($id);
+		$projects = Project::findOrFail($id);
 
 		if($projects->owner_id == $userId) {
-			$projects->mark();
+			$projects->markComplete();
 		}
 
 		return Redirect::to('home');
@@ -28,7 +28,7 @@ class ProjectController extends \BaseController {
 
 	}
 
-	public function postNew(){
+	public function postNew() {
 		$rules = ['name' => 'required|min:3|max:255'];
 		$validator = Validator::make(Input::all(), $rules);
 
@@ -44,17 +44,23 @@ class ProjectController extends \BaseController {
 		return Redirect::to('home');
 	}
 
-	public function getProject($projectID) {
+	public function getProject(Project $project) {
+		$userId = Auth::user()->id;
 
-		$project = new Project();
-		$project->getSubTasks($projectID);
+		if($userId !== $project->owner_id) {
+			Redirect::to('dashboard');//->withErrors('You cannot view this project');
+		}
 
-		return View::make('project');
+		$project_model = new Project();
+		//$projectData = $project->getProject($projectID);
+		$projectSubTasks = $project_model->getProjectSubTasks($project->id);
+
+		return View::make('project', ['project'=>$project,'projectSubTasks'=>$projectSubTasks]);
 	}
-	public function postProject($projectID) {
+	// public function postProject($projectID) {
 
-		return View::make('project');
-	}
+	// 	return View::make('project');
+	// }
 
 	public function getDelete(Project $project) {
 		$userId = Auth::user()->id;
@@ -63,7 +69,7 @@ class ProjectController extends \BaseController {
 			$project->delete();
 		}
 
-		return Redirect::to('home');
+		return Redirect::to('dashboard');
 	}
 
 
